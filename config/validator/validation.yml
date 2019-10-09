@@ -1,0 +1,11 @@
+App\Entity\User:
+  properties:
+    name:
+      - NotBlank:
+          message: "Name cannot be blank"
+      - Length:
+          min: 3
+          minMessage: "The name must be 3 or more characters"
+      - EqualTo:
+          value: '123'
+

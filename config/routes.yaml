@@ -1,3 +1,19 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+get_user:
+  path: /api/user/{userId}
+  controller: App\Controller\DummyApiController::getUserDetails
+  methods:    GET
+  requirements:
+    userId: '\d+'
+create_user:
+  path: /api/user
+  controller: App\Controller\DummyApiController::create
+  methods:    POST
+new_message:
+  path: /
+  controller: App\Controller\ServiceTestController::new
+  methods:    GET
+send_email:
+  path: /email
+  controller: App\Controller\ServiceTestController::email
+  methods:    GET
+
